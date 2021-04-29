@@ -1,0 +1,327 @@
+\documentclass[12pt]{article}
+%packages
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{subfig}
+\usepackage[a4paper, margin=0.70in]{geometry}
+\usepackage[bottom]{footmisc}
+
+
+
+\doublespacing
+
+\title{Does Inflation Targeting Increase Financial Instability in Developed Economies?}
+\author{\normalsize EC424 : Monetary Economics  \\ \scriptsize Wordcount: 3950 words appx(excluding footnotes and references)}
+\date{30 April 2021}
+
+\begin{document}
+\maketitle
+
+\pagebreak
+\tableofcontents
+\pagebreak
+\section{Introduction}
+
+In the book `Inflation Targeting: Lessons from the International Experience' \cite{RN1} define Inflation Targeting(IT) as ``a framework for monetary policy characterized by public announcement of official quantitative targets for the inflation rate over one or more time horizons, and by an explicit acknowledgement that low,  stable inflation is monetary policy's primary long run goal.''
+
+Although there are other macroeconomic policy objectives, there was strong support for focusing on price stability due to widespread acceptance of the view that monetary policy only affects prices in the long run\citep{RN32}. As argued by \cite{RN1}, price stability forms a basis for all macroeconomic goals and provides a nominal anchor for conducting monetary policy.  However, the 2008 financial crisis showed that even during periods of price stability, as was the case prior to the crisis, financial stresses can develop. Since the advent of the crisis, however, central banks were forced to re-assess the relationship between monetary policy and a key macroeconomic policy goal of financial stability.  \cite{RN11} provides multiple accounts of widespread criticism of Inflation Targeting(IT) as it is conventionally practiced since the crisis. It was believed to have increased financial instability stemming from the monetary authorities' failure to prioritise, identify and correct for any instability.  The argument for why monetary authorities need not take into account such issues was driven by conventional wisdom. According to this, a by-product of aggregate price stability was financial stability \citep{RN3}.  However, as pointed out by \cite{RN3}, while IT regime may improve credibility and allow central banks to control inflation, this environment can still lead to build-up of financial imbalances with no noticeable effect on inflation. \cite{RN11} proposes that central bankers consider financial stability in their policy deliberations just like a trade-off between IT and output gap. Although major central banks have since taken it into consideration, the underlying debate still remains as to whether IT as conventionally practiced increases financial instability in the economy. 
+As more central banks have begun adopting an IT framework over the past decade it has become important to identify any possible limitations which exist in its implementation. 
+
+In this paper I explore whether putting price stability ahead of other macroeconomic goals by adopting IT has an adverse effect on the financial stability of the economy.  In contrast to past papers, \footnote{\cite{RN4}, \cite{RN34}}I find no evidence that IT policies have any causal impact on financial instability in the economy.
+
+The rest of the paper is structured in the following manner. Section 2 briefly discusses the past literature on empirical findings of IT regimes.  Section 3 describes the data I use and the empirical strategy to identify any causal effect. Section 4 summarises my results and Section 5 concludes.
+
+\section{Literature Review}
+
+The empirical tools used to evaluate the effects of Inflation Targeting(IT) on the economy have improved over the years. So too have the questions we ask about the impact of IT. The initial focus was on evaluating the impact of IT on variables such as inflation, inflation variability and GDP growth variability.  Control over such variables is one of the reasons many countries initially adopted the policy. As cited in \cite{RN13} the first few papers relied on applied time series techniques to country studies and found mixed results on its impact. Later studies such as \cite{RN10} begin comparing targeters and non-targeters in general using a difference-in-difference OLS strategy.  They apply this on a sample of 20 industrial economies and find no benefits of an IT regime. Following the same methodology, \cite{RN33} apply it to a sample of developing economies and find greater reductions in Inflation and GDP growth variability amongst ITers.
+
+A key issue with the methodology they used is that it does not control for the self selection bias\footnote{Countries choose to enter into Inflation Targeting regime, thereby making Treatment assignment non-random} that arises when trying to answer this question.
+\cite{RN13} was one of the first papers to control for the self selection bias, by using a variety of propensity score matching methods. They used a bigger data set and evaluated the treatment effect of IT in seven industrial countries. They do not find any significant benefit of IT on inflation or inflation variability. A similar analysis by \cite{RN14} on developing economies found a positive benefit of IT on the economies.
+A disadvantage in using propensity score matching, is that it does not consider common time effect variation of economies. An alternate methodology used by \cite{RN16}  was a dynamic panel data analysis on a sample of developing economies controlling for simultaneity and omitted variable bias but allowing for self-selection bias. They find no evidence that IT framework has been able to stabilize inflation and output growth.
+
+The focus on most of the empirical research has been to quantify the benefits, if any. The results have been mixed, though none have found any harm in adopting IT policies. Since the global financial crisis, a number of people have questioned the reliability of the IT framework to notice and address financial instability. 
+
+\cite{RN34} were one of the first to consider the impact of IT policies on financial conditions. Considering 17 industrial economies between 1980-2007,  they use real house price growth and house price-rent ratio as a proxy for financial imbalances.  The question they focus on, is whether a narrow pursuit of IT policies actively damage financial stability of the economy over longer horizons. Using a similar propensity score matching technique as in \cite{RN13} they find positive and significant effects of IT on house price-to-rent ratio and growth rate of house prices. \cite{RN4} builds on their paper and develop a multi-variate index of financial stability. They focus on a sample of emerging market economies. Using both panel data methodology as well as propensity score matching, they find some evidence that IT is linked to financial instability. However, the use of propensity score in matching is found to increase sensitivity of treatment effect to choice of model as well as statistical bias \citep{RN26}.
+
+Overall, while the literature has focused on the impact of IT policies on variables such as inflation and output growth volatility,  research on its impact on financial stability is limited and can be expanded to explore the question.  I will be contributing to these studies in three key ways. Firstly,  I expand on the data sets previously used. My analysis is based on 23 developed economies including 10 targeters from 1998-2013.  Focusing on countries having well developed financial markets makes identifying the causal effect more relevant. Since, significant differences in financial sector development affect the ability of monetary authority to use indirect, market-based instruments to respond to financial instability, thereby, helping to identify the causal effect by reducing the effect of confounding factors.
+Secondly, I will be constructing a similar financial stability index as \cite{RN4} but expanding on it to include more relevant variables to better capture instability.
+Lastly, I will be using a novel empirical strategy commonly used in other social sciences but not previously used in this literature.  Based on the work by \cite{RN29} I will be using Non-parametric pre-processing methods to perform the matching. Thereby reducing the dependence on the model used to evaluate the treatment effects and eliminating self-selection bias.
+
+
+\section{Model Specification, Data and Estimation Methods}
+
+\subsection{Financial Conditions Index}
+\subsubsection{Financial Conditions Index Model}
+
+As cited in \cite{RN4}, according to \cite{borio2009}, financial instability is ``a set of conditions that is sufficient to result in emergence of financial distress/crises in response to normal-size shocks''. \cite{RN35} provide a summary of the methods used in construction of Financial Conditions Indices (FCI) which they group into two broad categories. The fundamental problem is how to select weights of the variables in order to combine them to form a single indicator. One method is based on economic models and have microeconomic foundations but are limited by the existing relationships in the model.  Furthermore, existing models do not capture the dynamic interactions of multiple variables that may help capture the effect of monetary policy on financial stability.  The other method is based on statistical aggregation techniques and is not limited by any model but lacks microeconomic foundations. 
+
+I follow \cite{RN4} and use Principal Component Analysis (PCA) in order to construct my index. Another useful method is Dynamic Factor analysis as used by \cite{RN35}. However, given the simplicity of the data I have available to me, I have found PCA to be ideal for purposes of this essay.
+
+Principal Component Analysis is a method to reduce the dimensions of multivariate data in a manner that captures as much variation in the existing data.  It is done by linearly combining the variables along the directions of greatest variance. This is appropriate for the construction of a simple financial stability indicator as it allows us to capture common fluctuations in the data set of each country.  This also helps capture the inter-connectedness of financial markets well \citep{RN17}. 
+
+To develop my Financial Conditions Index, I rely on a set of 7 variables \footnote{Given the cross-country nature of the study, fewer variables make the finding and compiling data easier, but one can include more variables}.  I divide the economies into four relevant categories: Banking sector, Foreign exchange market, Debt Market and Equity market \citep{RN20}.  The variables chosen are based on existing literature and availability of data amongst all countries.
+
+\begin{enumerate}
+  \item  Ratio of Bank's Non-Performing Loans to Total Gross Loans
+
+Higher Ratio is usually associated with greater pressure in the economy. A sudden increase corresponds to greater stress in the banking sector \citep{RN36}.
+
+   \item  Bank Regulatory capital to risk weighted assets
+
+Capital adequecy ratio is a useful measure of stress on banking system. It helps characterise the ability of banks to address unexpected losses. A higher ratio is usually associated with lower instability \citep{RN36}.
+
+   \item  Domestic Credit to private sector
+
+This represents the banking system's claims on the private sector. The argument is that high levels of bank loans might be unsustainable in the economy leading to financial stress \citep{RN4}
+
+   \item  M3 as a percentage of GDP
+
+High levels of liquidity is thought to be associated with increased risk taking leading to a greater possibility of asset price bubbles \citep{RN4}. This helps capture instability in debt markets.
+
+   \item  Stock market volatility
+
+In the past, periods of economic uncertainty are usually associated with high stock market volatility \citep{RN18}.
+
+   \item  Stock market index
+
+Stock market Index helps capture any sudden fluctuations in financial markets as well as overall stock market performance. A sudden increase can indicate financial bubble or other strains in the equity markets \citep{RN4}.
+
+   \item  Real Effective Exchange rate
+
+Financial stress can occur from unexpected volatility in the exchange rate which can affect liquidity and efficiency of foreign exchange markets \citep{RN20}. A refined measure would be to only include fluctuations from a model based benchmark value. However, given the limitations in data I have decided to use the exchange rate itself.
+\end{enumerate}
+
+The final Financial Conditions index are compiled for each country, i and for each time period, t following  \cite{RN4}.
+
+\[FCI_{it} = \sum_{n=1}^{7} \omega_{in}\chi_{int} \]
+
+Where $\omega_{in}$ represents the weights from the resulting principal component analysis and $\chi_{int}$ are the individual indicators scaled to have mean 0 and standard deviation 1. The resulting FCI is re-scaled to vary from 0 to 1, with a higher number representing a greater instability in the economy.  This makes the comparison easier and more relevant.
+
+\subsubsection{Financial Conditions Index Data}
+
+I collected annual data for the 16 year period between 1998 and 2013 for 23 countries in the sample.  Data for the following variables are gathered from World bank's Global Financial Development : ratio of Non-Performing Loans to Total Gross Loans, Capital adequacy ratio, Stock Price Volatility and Domestic Credit to Private Sector.  Real Effective Exchange rate Index with a base year of 2010 has been picked from World Bank's Development Index database and its natural log is taken. From the IHS Markit economic database I collected data for the variables for Stock market Index and M3 as a percentage of GDP.  
+There were 7 missing values in the data set,  each in a different row. As Principal Component Analysis requires a full data set, I decided to use the average of the adjacent values to complete the data set. As a result, the final analysis consists of 112 data points for each country.
+
+
+\subsection{Inflation Targeting and Financial Stability}
+
+\subsubsection{Inflation Targeting and Financial Stability Framework}
+
+In attempting to estimate any treatment effect of Inflation Targeting (IT) on financial stability we run into the fundamental problem of causal inference : at any given point in time a country is either an ITer or not, thus making individual comparison impossible. Instead, we evaluate the average treatment effect on the treated and the average treatment effect.   That is, the effect of IT on financial stability for inflation targeters and the effect of IT on financial stability in the entire population respectively.
+\[ \text{Average Treatment Effect on the Treated (ATT)} =  E[Y^{1}|A= 1] - E[Y^{0}|A=1]  \]
+\[ \text{Average Treatment Effect (ATE)} =  E[Y^{1}] - E[Y^{0}]  \]
+Here A is a binary variable which takes value 1 if a country is following an IT regime and 0 otherwise.  $Y^{1} \text{  and   } Y^{0}$ is the outcome variable (Financial Stability) amongst ITers and non-ITers respectively. 
+
+Another major issue in empirical analysis using observational data is self selection bias.  Countries in the sample choose to follow IT (receive treatment) which makes any treatment (causal) effect of IT on financial stability hard to uncover. Identification of causal inference requires a few assumptions in order to identify treatment effects.
+
+The following assumptions are common in the literature and I refer to \cite[chap.~21]{RN22}.
+
+\begin{enumerate}
+\item Stable Unit Treatment Value Assumption (SUTVA):
+
+There are two parts to this assumption. One is the decision to adopt IT by a country does not affect financial conditions resulting in some other country. The other is that there is only one version of adopting IT for all countries. Both these assumptions may not hold true in reality. Given the inter-connectedness of country's economies in the present, it can be argued that they are interlinked but I believe any link to be weak or not enough to violate the assumption. However, the second part of the assumption may be violated as the manner of implementation of IT policies as well as the policies vary across countries. This is something that I have not controlled for in this paper. 
+
+\item Ignorability
+
+Introduced by \cite{RN21}, this is sometimes referred to as ignorability of treatment.  It states that conditional on a set of covariates $X$, $A$ and $(Y^{1},Y^{0})$ are independent.
+
+According to \cite[chap.~21]{RN22} good candidates for choice of covariates $X$ are variables that impact either the treatment assignment (Adopting IT regime) or the outcome (Financial Instability). I follow the existing literature\footnote{\cite{RN4}, \cite{RN13},\cite{RN34}} and control for lagged inflation rate, real GDP per capita growth, lagged short term and long term real interest rates.  I also include IMF's financial development index as a covariate.
+
+\item Overlap
+
+For all $X \in \Omega$, where $\Omega$ is the support of the covariates, $ 0 < P(A=1|X) < 1 $. This ensures that for any given set of country covariates or characteristics there are countries in the sample who are ITers and non-ITers. 
+\end{enumerate}
+
+
+
+In order to arrive at the treatment effect, I follow a matching procedure to estimate the unobserved potential outcomes using the covariates. Past studies in the literature studying IT have relied on Propensity Score Matching and use multiple statistical models to estimate the treatment effect \footnote{\cite{RN4}, \cite{RN13},\cite{RN34}}.  
+
+First issue with this method is the choice of model. Although non-parametric methods can be used, the curse of dimensionality severely restricts when this is possible. All this leads to sensitivity of the choice of model towards the resulting outcome \citep{RN29}. Therefore, instead of using a matching procedure to directly impute the data, I follow \cite{RN29} and use matching as non-parametric pre-processing and subset selection. This method has been widely used in other social sciences.  It attempts to provide a unified approach which makes the conclusions drawn less dependent on the choice of model. According to \cite{RN37} as cited in \cite{RN26}  ``the goal of matching is to create a setting within which treatment effects can be estimated without making heroic parametric assumptions.'' The approach focuses on adjusting the data so that the relationship between the treatment variable $A_{i}$ and $X_{i}$ is reduced minimising the bias and inefficiency as a result \citep{RN29}.
+
+Second issue in recent literature is with using propensity scores for matching. \cite{RN26} use simulation and real data to show that doing so leads to increase in deviations from exact matching,\footnote{Exact matching is the ideal where we find exact match of covariates in both treatment and control.}increase in the sensitivity of treatment effects to the choice of model and increase in statistical bias. Therefore, I use the Mahalanobis distance metric to measure distance between covariate vectors. $S$ below represents the covariance matrix.
+
+\[\text{The Mahalanobis Distance Metric } d(x,y) = \sqrt{(x - y)'S^{-1}(x - y)} \]
+
+The matching procedure I choose is be based on whichever method best balances the covariates between the treatment and control. The mahalanobis distance metric which approximates a fully blocked randomized experiment is used during the matching. Following the pre-processing matching I implement a weighted linear regression using the weights generated from the matching procedure and estimate the robust standard errors. The weights generated make the resulting sample appear as though it were generated using a blocked randomised experiment.
+
+
+\subsubsection{Inflation Targeting and Financial Stability Data}
+
+I collected annual data for the 16-year period between 1998 and 2013 for 23 countries in the sample.  I collected the Financial Development Index from the IMF database.  The Long-term and Short-term Interest Rates and percentage change in Real GDP are from the IHS Markit database. The Current Account Balance as a percentage of GDP and Inflation rate are from the World Bank Development Indicators database.  Finally, the IT dummy data is from \cite{RN9,RN2} as shown in table 7.
+There were 3 missing variables which were omitted at the time of matching giving a total of 365 observations in the final data set.  
+
+
+\section{Results}
+The Financial Conditions Index for each of the country is displayed in Figure 1. A good sign that the indicator is relevant is seen by viewing how the index changed prior to and following the global financial crisis. Most countries see a spike in their index indicating a build of financial stress in the economy.  A limitation of the index can also be noticed by looking at the downward sloping graph of United Kingdom. This might be because the index is relative rating within the group, so it will capture only relative increase in stress. Another explanation is that the variables and structure of the FCI are too simplistic to capture the differences in manner of buildup of financial stress. There are better ways to check for relevance of the indicator by using predictive models as in \cite{RN35}. For the purposes of this paper, I do not look in depth into this and rely on the theoretical reasons as the main justification of the efficacy of the index in its ability to capture financial stress in the economies.
+
+Next, I discuss the results from the matching to estimate the average treatment effect on the treated and average treatment effect.
+Using the Mahalanobis distance metric I select the matching method based on which achieved the greatest balance on the covariates. Full optimal matching provided a good balance as seen in table 1 and figure 3.  There is a clear improvement in the balance after matching\footnote{As seen in Figure 3} which is a good indicator of the effectiveness of the preprocessing. 
+A standardised mean difference of less than 0.1 is considered ideal \citep{matchit}.  Inflation and Financial development covariates exceed the recommended threshold. Hence, as recommended by \cite{matchit}, I use a covariate adjustment while estimating the treatment effects. I estimate the treatment effects using a simple weighted linear regression model with treatment covariate interactions and mean centered covariates. The values were adjusted using the weights from the matching. 
+
+The results from the t-test of estimating the coefficients using cluster robust standard errors is mentioned in table 2 for ATT and table 5 for ATE. 
+Both are statistically insignificant. The standard error is fairly small, it is enough to make the 95 percent confidence interval mostly positive but very close to 0. The confidence interval is small indicating that is a good summary of the estimator and the data seems to have produced an accurate estimate. 
+These estimates state that if the true state of the world is one where Inflation Targeting (IT) has no impact on the Financial Conditions Index, then it is likely we would be seeing these minor fluctuations around 0. As a result, we fail to reject the hypothesis that IT causes greater financial instability as captured by the financial conditions index.
+Even in the world where the estimates are considered true,  the effect is small, at most 5.5 percent for ATT and 4 percent for the ATE in the upper bounds of the 95 percent confidence intervals.
+
+Overall, the empirical investigations provide no evidence that the IT strategy is associated with less stable financial conditions. This contrasts with earlier studies by \cite{RN4} and \cite{RN34}. These papers find statistical and economic significance for developing and developed economies respectively  using different empirical methods. These conclusions cast doubt on the argument that inflation targeting regimes \footnote{at least in developed economies}may be negligent towards other relevant concerns such as financial imbalances; a common criticism of IT regime since the global financial crisis in 2008. 
+
+\pagebreak
+\section{Conclusion}
+
+Adoption of Inflation Targeting (IT) has been growing since the early 1990s. As of mid-2009, 26 countries are classified as ITers, including 11 advanced and 15 emerging market economies \citep{RN2}. Despite criticisms of the framework since the global financial crisis, IT has been undertaken by more countries over the past decade. The focus of monetary authorities of IT countries largely on price stability was thought to have made them blind to financial stability concerns. Thereby, increasing financial imbalance. This paper tries to empirical test this question.
+
+The analysis uses yearly data for 23 advanced economies including 10 targeters for the 16-year period between 1998 and 2013. I first construct a multi-variate financial conditions index for each country for the period using relevant macro-economic and financial variables. To control for self-selection problem and possible model dependence, I use matching as a method of non-parametric pre-processing to balance the sample. I then perform a simple regression with treatment covariate interactions and mean centered covariates on the balanced sample. The results of the empirical indications show almost no evidence that Inflation Targeting countries causes higher financial instability. This suggests that on average developed economy Inflation Targeters are no more financially vulnerable than non-Inflation Targeters. 
+
+There are a few areas which are lacking and can be improved in future papers in the area. First, the Financial Conditions Index is an estimate of financial stability and a crude one at best. Using better variables and aggregation techniques can help provide a better picture of financial stability. Second, the assumptions required to identify any causal inference such as Stable Unit Treatment Value Assumption and Ignorability are untestable and may not hold in this analysis. Third, the variables and data was limited to mostly open sources, which doesn't allow to control for all possibly relevant covariates in the matching. Fourth, many countries in the sample even though not explicit inflation targeters, do follow similar policies. For example, the European monetary union and the United states are sometimes considered to be following policies similar to Inflation targeting \citep{RN9}.  This makes inflation targeting policies of countries more on a scale than a simple binary position. The manner in which it is implemented and conducted varies too. All this complicates identification further. Future studies may wish to categorise the inflation targeters on a more granular scale depending on the type of policies, method of conducting them and add them as covariates in the matching process. All of this can help improve identification of causal estimates if any.
+
+Overall, I find that Inflation targeting policies do not cause any harm in the form of increased financial instability. As a result, the focus of Inflation targeting on maintaining price stability and providing a nominal anchor for conducting policy can continue to remain the main priority of monetary authorities.
+
+
+\pagebreak
+
+\begin{figure}%
+\label{FCI_graph}
+\centering
+\includegraphics[scale = 0.7]{"FCI's copy.pdf"}
+\caption{Financial Conditions Indices}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width = 0.7\columnwidth,scale = 0.4]{FCI_Comparison_graph_axis.pdf}
+\caption{Financial Conditions Index Comparison}
+\end{figure}
+
+
+\begin{figure}%
+\centering
+\subfloat[\centering ATT]{{\includegraphics[width = 6cm]{"full_matching.pdf"}}}%
+\qquad
+\subfloat[\centering ATE]{{\includegraphics[width = 6cm]{ATE_SMD.pdf}}}%
+\caption{Standardised Mean difference before and after matching}
+\end{figure}
+
+
+\begin{table}[!htbp]
+\centering 
+  \caption{Matched summary(full-matching results for ATT)} 
+  \label{} 
+\scalebox{0.8}{%
+\begin{tabular}{@{\extracolsep{0.1pt}}p{0.5cm} cccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & Means Treated & Means Control & Std. Mean Diff. & Var. Ratio & eCDF Mean & eCDF Max & Std. Pair Dist. \\ 
+\hline \\[-1.8ex] 
+ST\_Int & $3.803$ & $3.921$ & $$-$0.083$ & $0.334$ & $0.043$ & $0.111$ & $0.659$ \\ 
+LT\_Int & $4.118$ & $4.053$ & $0.024$ & $0.759$ & $0.033$ & $0.088$ & $0.394$ \\ 
+Inflation & $2.478$ & $2.096$ & $0.155$ & $1.044$ & $0.036$ & $0.116$ & $0.413$ \\ 
+GDP & $2.105$ & $2.094$ & $0.004$ & $0.656$ & $0.031$ & $0.100$ & $0.474$ \\ 
+CAB & $1.059$ & $1.452$ & $$-$0.052$ & $0.881$ & $0.042$ & $0.116$ & $0.390$ \\ 
+FDI & $0.743$ & $0.691$ & $0.292$ & $1.312$ & $0.136$ & $0.309$ & $0.477$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular}  }
+\end{table} 
+
+\begin{table}[!htbp] \centering 
+  \caption{ATT : T-Test using cluster robust weighted std errors} 
+  \label{} 
+
+\begin{tabular}{@{\extracolsep{5pt}} ccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & Estimate & Std. Error & t value & Pr(\textgreater \textbar t\textbar ) \\ 
+\hline \\[-1.8ex] 
+(Intercept) & $0.432$ & $0.011$ & $37.880$ & $0$ \\ 
+IT1 & $0.014$ & $0.021$ & $0.669$ & $0.504$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular}  
+\end{table} 
+
+\begin{table}[!htbp] \centering 
+  \caption{ATT : Confidence Intervals} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} ccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & 2.5 \% & 97.5 \% \\ 
+\hline \\[-1.8ex] 
+(Intercept) & $0.409$ & $0.454$ \\ 
+IT1 & $$-$0.027$ & $0.055$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+\begin{table}[!htbp] \centering 
+  \caption{Matched summary(full-matching results for ATE)} 
+  \label{} 
+\scalebox{0.8}{%
+\begin{tabular}{@{\extracolsep{0.1pt}}p{0.5cm} cccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & Means Treated & Means Control & Std. Mean Diff. & Var. Ratio & eCDF Mean & eCDF Max & Std. Pair Dist. \\ 
+\hline \\[-1.8ex] 
+ST\_Int & $3.675$ & $3.786$ & $$-$0.059$ & $0.367$ & $0.040$ & $0.105$ & $0.502$ \\ 
+LT\_Int & $3.677$ & $3.677$ & $$-$0.0001$ & $0.792$ & $0.026$ & $0.096$ & $0.391$ \\ 
+Inflation & $2.214$ & $1.897$ & $0.138$ & $1.017$ & $0.035$ & $0.129$ & $0.444$ \\ 
+GDP & $1.753$ & $1.688$ & $0.023$ & $0.698$ & $0.033$ & $0.089$ & $0.440$ \\ 
+CAB & $1.306$ & $1.321$ & $$-$0.002$ & $0.909$ & $0.048$ & $0.150$ & $0.411$ \\ 
+FDI & $0.746$ & $0.694$ & $0.317$ & $1.273$ & $0.131$ & $0.295$ & $0.530$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular}  }
+\end{table} 
+
+\begin{table}[!htbp] \centering 
+  \caption{ATE} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} ccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & Estimate & Std. Error & t value & Pr(\textgreater \textbar t\textbar ) \\ 
+\hline \\[-1.8ex] 
+(Intercept) & $0.426$ & $0.010$ & $42.718$ & $0$ \\ 
+IT1 & $$-$0.002$ & $0.022$ & $$-$0.111$ & $0.911$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+\begin{table}[!htbp] \centering 
+  \caption{ATE} 
+  \label{} 
+\begin{tabular}{@{\extracolsep{5pt}} ccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & 2.5 \% & 97.5 \% \\ 
+\hline \\[-1.8ex] 
+(Intercept) & $0.407$ & $0.446$ \\ 
+IT1 & $$-$0.045$ & $0.040$ \\ 
+\hline \\[-1.8ex] 
+\end{tabular} 
+\end{table} 
+
+\begin{table}
+ \caption{Country List \citep{RN2,RN9}}
+  \centering
+\begin{tabular}{|c | c|}
+
+\hline
+\textbf{Inflation Targeters} & \textbf{Non-Inflation Targeters} \\
+\hline
+\parbox[c]{8cm}{Australia(1993M4),Canada(1991M2),Czech Republic(1997M12),  Iceland(2001M3),\\South Korea(2001M1),Norway(2001M3),\\Slovakia(2005M1),Switzerland(2000M1),\\Sweden(1993M1), \\United Kingdom(1992M10)} & \parbox[c]{8cm}{Austria,Belgium,Denmark,Finland,  France,Germany,Greece,Ireland,  Italy,Japan,Singapore,Spain,United States} \\
+\hline
+\end{tabular}
+\end{table}
+
+\pagebreak
+%References used but not cited above
+\nocite{RN24}
+\nocite{matchit}
+\nocite{stargazer}
+\nocite{RN23}
+
+\bibliographystyle{agsm} % Harvard style
+\bibliography{exportlist}
+
+\end{document}
